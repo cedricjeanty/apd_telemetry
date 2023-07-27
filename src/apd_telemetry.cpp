@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "APD_telemetry.h"
+#include "apd_telemetry.h"
 
 
 APD_Telem::APD_Telem(uint8_t _poles = 1) {
