@@ -68,27 +68,27 @@ int APD_Telem::parse(void){
 }
 
 bool APD_Telem::is_started(void){
-  return status | ~(1 << MOTOR_STARTED_BIT);
+  return status & (1 << MOTOR_STARTED_BIT);
 }
 
 bool APD_Telem::is_saturated(void){
-  return status | ~(1 << MOTOR_SATURATED_BIT);
+  return status & (1 << MOTOR_SATURATED_BIT);
 }
 
 bool APD_Telem::is_overtemp(void){
-  return status | ~(1 << ESC_OVER_TEMP_BIT);
+  return status & (1 << ESC_OVER_TEMP_BIT);
 }
 
 bool APD_Telem::is_overvolt(void){
-  return status | ~(1 << ESC_OVER_VOLT_BIT);
+  return status & (1 << ESC_OVER_VOLT_BIT);
 }
 
 bool APD_Telem::is_undervolt(void){
-  return status | ~(1 << ESC_UNDER_VOLT_BIT);
+  return status & (1 << ESC_UNDER_VOLT_BIT);
 }
 
 bool APD_Telem::start_err(void){
-  return status | ~(1 << MOTOR_START_ERR_BIT);
+  return status & (1 << MOTOR_START_ERR_BIT);
 }
 
 int APD_Telem::CheckFlectcher16(void) {
